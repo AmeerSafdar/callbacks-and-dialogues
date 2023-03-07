@@ -13,6 +13,7 @@ import 'package:task5/helper/const/string_helper.dart';
 import 'package:task5/helper/utils/map_utils.dart';
 import 'package:task5/presentation_layer/widget/button_widget.dart';
 import 'package:task5/presentation_layer/widget/sizedBox_widget.dart';
+import 'package:task5/presentation_layer/widget/text_widgets.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -27,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
     final bloc= BlocProvider.of<MainBlocs>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(StringHelper.MAIN_SCREEN),
+        title: TextsWidget(txt:StringHelper.MAIN_SCREEN),
       ),
       body: BlocListener<MainBlocs, States>(
         listener: (context, state) {
@@ -129,7 +130,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-  
+
  intentCallSMS(String actions, String dta) {
      intent =  AndroidIntent(
            action: actions,

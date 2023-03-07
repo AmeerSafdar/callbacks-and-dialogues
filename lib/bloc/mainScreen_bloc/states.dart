@@ -1,5 +1,5 @@
 
-enum Status { initial, callState, storageGranted, denied, permamentDenied, locationState, messageState, }
+enum Status {initial, callState, storageGranted, denied, permamentDenied, locationState, messageState,}
 
 class States {
    States({
